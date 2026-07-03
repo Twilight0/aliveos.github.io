@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to AliveOS"
-date: 2026-07-03 15:30:00 +0000
+date: 2026-07-02 09:00:00 +0000
 author: The AliveOS Project
 ---
 

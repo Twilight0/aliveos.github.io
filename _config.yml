@@ -13,6 +13,11 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+# Whitelisted on GitHub Pages: RSS feed + sitemap
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
 # Don't publish repo meta files to the live site
 exclude:
   - README.md
