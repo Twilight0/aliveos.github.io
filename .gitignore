@@ -10,3 +10,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Jekyll build artifacts (not needed in repo; GitHub Pages builds remotely)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock

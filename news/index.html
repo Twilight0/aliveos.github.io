@@ -1,0 +1,25 @@
+---
+layout: default
+title: News
+description: Latest news and updates from the AliveOS project.
+---
+
+<section class="news-section">
+    <h2 class="section-heading">News &amp; Updates</h2>
+
+    {% if site.posts.size == 0 %}
+        <p class="news-empty">No posts yet. Check back soon.</p>
+    {% else %}
+        <ul class="news-list">
+            {% for post in site.posts %}
+                <li class="news-item">
+                    <a class="news-item-title" href="{{ post.url }}">{{ post.title }}</a>
+                    <span class="news-item-date">{{ post.date | date: "%b %d, %Y" }}{% if post.author %} &middot; {{ post.author }}{% endif %}</span>
+                    {% if post.excerpt %}
+                        <p class="news-item-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</section>

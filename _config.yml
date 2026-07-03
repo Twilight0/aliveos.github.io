@@ -1,0 +1,34 @@
+title: AliveOS
+description: >-
+  A minimalist, Arch-based, developer-optimized Linux distribution, designed for
+  essential performance and a clean workflow.
+url: "https://aliveos.org"
+baseurl: ""
+
+# Clean news post URLs: /news/<post-slug>/
+permalink: /news/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Don't publish repo meta files to the live site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default

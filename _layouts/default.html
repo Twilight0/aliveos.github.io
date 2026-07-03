@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - Minimalist Arch-based, Developer-Optimized | Coming Soon{% endif %}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <!-- Modern web font (Optional external call, can be removed for complete self-containment) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} News" href="{{ '/feed.xml' | absolute_url }}">
+    <style>
+        /* Modern, Dark, Dev-Focus Style */
+        :root {
+            /* Palette derived from the logo's electric blue and purple */
+            --bg-color: #0d1117; /* Very deep charcoal/near-black */
+            --text-color: #c9d1d9; /* Standard light text */
+            --header-text: #f0f6fc; /* Slightly brighter headers */
+            --accent-blue: #58a6ff; /* Match logo core blue */
+            --accent-purple: #8957e5; /* Match logo core purple */
+            --secondary-bg: #161b22; /* Card/section background */
+            --grid-line: #21262d; /* Subtle grid lines */
+            --footer-text: #8b949e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            background-image: linear-gradient(rgba(13, 17, 23, 0.86), rgba(13, 17, 23, 0.93)), url('/assets/background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle background circuit-board effect, matching the logo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), 
+                              linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            margin: auto; /* centers vertically & horizontally; stays safe when content overflows (long posts) */
+        }
+
+        /* Logo and Header */
+        .header-section {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header-section .logo-link {
+            display: inline-block;
+            line-height: 0;
+            text-decoration: none;
+        }
+
+        .header-section img.logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+            /* subtle glow matching logo light */
+            filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.2));
+        }
+
+        .header-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .header-section .tagline {
+            font-size: 1.25rem;
+            color: #8b949e;
+            max-width: 600px;
+        }
+
+        /* Site navigation */
+        .site-nav {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+        }
+        .site-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        .site-nav a:hover {
+            color: var(--header-text);
+            background-color: var(--secondary-bg);
+        }
+
+        /* Status Section */
+        .status-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border-top: 1px solid var(--grid-line);
+            border-bottom: 1px solid var(--grid-line);
+        }
+
+        .status-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--header-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .status-section .status-text {
+            font-size: 1rem;
+            color: #8b949e;
+            font-family: 'Roboto Mono', monospace; /* Monospace for version info */
+        }
+
+        /* Features Section - Modern Grid */
+        .features-section {
+            margin-bottom: 4rem;
+        }
+
+        .features-section h3 {
+            font-size: 1.6rem;
+            color: var(--header-text);
+            margin-bottom: 2rem;
+            text-align: left;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--grid-line);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+            font-family: 'Roboto Mono', monospace; /* Use simple symbols */
+        }
+
+        .feature-details {
+            flex-grow: 1;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: var(--header-text);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #8b949e;
+            line-height: 1.4;
+        }
+
+        /* Section heading (used on News listing) */
+        .section-heading {
+            font-size: 1.6rem;
+            color: var(--header-text);
+            margin-bottom: 2rem;
+            text-align: left;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        /* News listing */
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .news-item {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--grid-line);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .news-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+        }
+        .news-item-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--header-text);
+            text-decoration: none;
+            display: block;
+        }
+        .news-item-title:hover {
+            color: var(--accent-blue);
+        }
+        .news-item-date {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--footer-text);
+            display: block;
+            margin-top: 0.35rem;
+        }
+        .news-item-excerpt {
+            font-size: 0.92rem;
+            color: #8b949e;
+            line-height: 1.5;
+            margin: 0.6rem 0 0;
+        }
+        .news-empty {
+            color: var(--footer-text);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Single post */
+        .post {
+            text-align: left;
+        }
+        .post-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--grid-line);
+        }
+        .post-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--header-text);
+            margin: 0 0 0.5rem;
+            line-height: 1.2;
+        }
+        .post-meta {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--footer-text);
+            margin: 0;
+        }
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+        .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+            color: var(--header-text);
+            font-weight: 600;
+            margin: 1.8rem 0 0.8rem;
+            line-height: 1.3;
+        }
+        .post-content h1 { font-size: 1.8rem; }
+        .post-content h2 { font-size: 1.45rem; }
+        .post-content h3 { font-size: 1.2rem; }
+        .post-content p { margin: 0 0 1.1rem; }
+        .post-content a { color: var(--accent-blue); text-decoration: none; }
+        .post-content a:hover { text-decoration: underline; }
+        .post-content ul, .post-content ol { margin: 0 0 1.1rem; padding-left: 1.5rem; }
+        .post-content li { margin: 0.4rem 0; }
+        .post-content blockquote {
+            border-left: 3px solid var(--accent-purple);
+            margin: 0 0 1.1rem;
+            padding: 0.5rem 1rem;
+            color: var(--footer-text);
+            background-color: var(--secondary-bg);
+            border-radius: 0 8px 8px 0;
+        }
+        .post-content code {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.88em;
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--grid-line);
+            border-radius: 4px;
+            padding: 0.1rem 0.35rem;
+            color: var(--accent-blue);
+        }
+        .post-content pre {
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--grid-line);
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 0 0 1.1rem;
+        }
+        .post-content pre code {
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--text-color);
+            font-size: 0.85rem;
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 0 1.1rem;
+        }
+        .post-content hr {
+            border: none;
+            border-top: 1px solid var(--grid-line);
+            margin: 2rem 0;
+        }
+        .post-back {
+            margin-top: 2.5rem;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+        }
+        .post-back a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .post-back a:hover {
+            text-decoration: underline;
+        }
+
+        /* Zero Bloat Policy */
+        .bloat-policy {
+            margin-bottom: 4rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #8b949e;
+            border: 1px dashed #30363d;
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .bloat-policy strong {
+            color: var(--accent-purple);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            color: var(--footer-text);
+            padding: 2rem 0;
+            border-top: 1px solid var(--grid-line);
+        }
+        
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo & Header -->
+        <div class="header-section">
+            <a href="/" class="logo-link"><img src="/assets/aliveos-logo.png" alt="AliveOS Logo" class="logo"></a>
+            <h1>AliveOS</h1>
+            <p class="tagline">A minimalist, Arch-based, developer-optimized Linux distribution, designed for essential performance and a clean workflow.</p>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/news/">News</a>
+                <a href="https://github.com/Twilight0/aliveos.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+        </div>
+
+        {{ content }}
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; {{ site.time | date: "%Y" }} AliveOS Project. All rights reserved.</p>
+            <p>
+                <a href="/news/">News</a> |
+                <a href="https://github.com/Twilight0/aliveos.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a> |
+                <a href="https://aliveos.org">aliveos.org</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
