@@ -187,10 +187,23 @@
         }
 
         .feature-icon {
-            color: var(--accent-blue);
-            font-size: 1.2rem;
-            margin-top: 0.2rem;
-            font-family: 'Roboto Mono', monospace; /* Use simple symbols */
+            flex-shrink: 0;
+            width: 56px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+        }
+        .feature-icon img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            display: block;
+        }
+        .feature-icon img.sm {
+            width: 26px;
+            height: 26px;
         }
 
         .feature-details {
