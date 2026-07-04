@@ -64,8 +64,8 @@ The repository already covers a fair amount of ground:
   XLibre.
 - **AliveOS core** &mdash; `aliveos-assets` and `aliveos-settings`.
 - **Themes &amp; utilities** &mdash; `graphite-gtk-theme-git` (including the
-  black compact variant), `tela-icon-theme`, `viewmd` (a lightweight GTK
-  markdown viewer), `nerd-dictation` (voice typing via Vosk),
+  black compact variant), `tela-icon-theme`, `markpad` (a lightweight GTK
+  markdown editor/viewer), `nerd-dictation` (voice typing via Vosk),
   `xdg-desktop-portal-xapp-filepicker`, `grub-silent-ldfix`, and the legacy
   Clutter stack that backs `dory-preview`.
 
