@@ -62,8 +62,7 @@ The repository already covers a fair amount of ground:
   for the X11 display server, alongside patched legacy NVIDIA drivers
   (`nvidia-390xx-utils`, `nvidia-340xx-utils`) tuned for modern kernels and
   XLibre.
-- **AliveOS core** &mdash; `aliveos-assets`, `aliveos-settings`, and
-  `aliveos-cinnamon-spices`.
+- **AliveOS core** &mdash; `aliveos-assets` and `aliveos-settings`.
 - **Themes &amp; utilities** &mdash; `graphite-gtk-theme-git` (including the
   black compact variant), `tela-icon-theme`, `viewmd` (a lightweight GTK
   markdown viewer), `nerd-dictation` (voice typing via Vosk),
