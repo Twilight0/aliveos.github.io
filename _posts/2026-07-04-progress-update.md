@@ -38,6 +38,49 @@ Native utilities are progressing in parallel:
 - **Respite Media Player** &mdash; streamlined playback, free of heavy bloat.
 - **Custom Cinnamon DE** &mdash; a refined, responsive desktop workflow.
 
+## The `aliveos-repo` package repository
+
+One piece worth calling out specifically: [aliveos-repo](https://github.com/Twilight0/aliveos-repo),
+our custom pacman repository. It compiles and hosts stable builds of AUR and
+local packages for AliveOS, and it does so automatically &mdash; a GitHub
+Actions pipeline runs on a weekly schedule inside a privileged Arch Linux
+container, pulls packages from the AUR, normalizes them with a small
+`clean_pkgbuild.py` helper, compiles them with `makepkg`, assembles the
+database with `repo-add`, and deploys the resulting `*.pkg.tar.zst` files to a
+`gh-pages` branch so they are instantly downloadable.
+
+The repository already covers a fair amount of ground:
+
+- **Dory** &mdash; the file manager itself, plus a full set of extensions
+  (`dory-audio-tab`, `dory-compare`, `dory-dropbox`, `dory-emblems`,
+  `dory-fileroller`, `dory-image-converter`, `dory-media-columns`,
+  `dory-pastebin`, `dory-preview`, `dory-python`, `dory-repairer`,
+  `dory-seahorse`, `dory-share`, `dory-terminal`).
+- **cinnamon-no-nemo** &mdash; Cinnamon repackaged without the Nemo dependency,
+  leaning on Dory for file handling instead.
+- **XLibre stack** &mdash; `xlibre-xserver-legacyabi`, a drop-in replacement
+  for the X11 display server, alongside patched legacy NVIDIA drivers
+  (`nvidia-390xx-utils`, `nvidia-340xx-utils`) tuned for modern kernels and
+  XLibre.
+- **AliveOS core** &mdash; `aliveos-assets`, `aliveos-settings`, and
+  `aliveos-cinnamon-spices`.
+- **Themes &amp; utilities** &mdash; `graphite-gtk-theme-git` (including the
+  black compact variant), `tela-icon-theme`, `viewmd` (a lightweight GTK
+  markdown viewer), `nerd-dictation` (voice typing via Vosk),
+  `xdg-desktop-portal-xapp-filepicker`, `grub-silent-ldfix`, and the legacy
+  Clutter stack that backs `dory-preview`.
+
+If you are running Arch (or an early AliveOS build), you can point pacman at the
+repository right now by adding this to `/etc/pacman.conf`:
+
+```ini
+[aliveos-repo]
+SigLevel = Optional TrustAll
+Server = https://Twilight0.github.io/aliveos-repo/x86_64
+```
+
+Then `sudo pacman -Syu` to sync.
+
 ## What is next
 
 The target for the initial `v0.1` release remains **Q3 2026**. Between now and
