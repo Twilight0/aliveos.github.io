@@ -398,6 +398,18 @@
             text-decoration: underline;
         }
 
+        footer .contact {
+            margin-top: 0.75rem;
+        }
+        footer .contact-label {
+            color: var(--footer-text);
+            margin-right: 0.35rem;
+        }
+        footer .contact-email {
+            margin: 0;
+            color: var(--accent-blue);
+        }
+
     </style>
 </head>
 <body>
@@ -424,7 +436,22 @@
                 <a href="https://github.com/Twilight0/aliveos.github.io" target="_blank" rel="noopener noreferrer">View on GitHub</a> |
                 <a href="https://aliveos.org">aliveos.org</a>
             </p>
+            <p class="contact">
+                <span class="contact-label">Sponsorships &amp; business:</span>
+                <a id="contact-email" class="contact-email">contact [at] aliveos [dot] org</a>
+            </p>
         </footer>
     </div>
+    <script>
+        (function () {
+            var user = "contact", domain = "aliveos.org";
+            var el = document.getElementById("contact-email");
+            if (el) {
+                var addr = user + "@" + domain;
+                el.href = "mailto:" + addr;
+                el.textContent = addr;
+            }
+        })();
+    </script>
 </body>
 </html>
