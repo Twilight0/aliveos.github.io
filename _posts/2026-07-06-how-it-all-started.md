@@ -6,8 +6,8 @@ author: The AliveOS Project
 ---
 
 Every distribution has an origin story. Most are boring. "We wanted a simpler
-Linux," they say, and then ship forty gigabytes of snaps. AliveOS's story is
-not that.AliveOS begins not with a grand vision, but with a single annoying dialog box.
+Linux" they say, and then ship forty gigabytes of snaps. AliveOS's story is
+not that. AliveOS begins not with a grand vision, but with a single annoying dialog box.
 Follow me.
 
 ## The something that was missing
