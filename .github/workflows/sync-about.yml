@@ -17,7 +17,7 @@ jobs:
         run: |
           curl -sL "https://raw.githubusercontent.com/Twilight0/Twilight0/master/README.md" -o /tmp/readme.md
           printf -- '---\nlayout: default\ntitle: About Me\n---\n' > about.md
-          cat /tmp/readme.md >> about.md
+          sed '/^<div align=\"center\">$/d; /^<\/div>$/d' /tmp/readme.md >> about.md
 
       - name: Commit and push if changed
         run: |

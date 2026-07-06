@@ -2,7 +2,6 @@
 layout: default
 title: About Me
 ---
-<div align="center">
 
 # 👋 Hello, I'm Twilight0!
 ### 🛠️ Creator of [AliveOS](https://github.com/Twilight0/aliveos "AliveOS") & Open Source Developer 🌍
@@ -76,4 +75,3 @@ Creating software and maintaining translations takes time and caffeine. If you u
 | **Ko-fi** | [Support on Ko-fi](https://ko-fi.com/alivegr_twilight0) |
 | **PayPal** | [Support on PayPal](https://paypal.me/AliveGR) |
 
-</div>
