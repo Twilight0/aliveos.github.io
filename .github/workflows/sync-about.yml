@@ -1,4 +1,4 @@
-name: Sync profile README to about page
+name: Sync about page
 
 on:
   workflow_dispatch:
@@ -11,26 +11,22 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Fetch and generate about page
+      - name: Generate about.md
         run: |
-          curl -sL "https://raw.githubusercontent.com/Twilight0/Twilight0/master/README.md" > /tmp/profile-readme.md
-          cat > about.md << 'EOF'
----
-layout: default
-title: About Me
----
-EOF
-          cat /tmp/profile-readme.md >> about.md
+          curl -sL "https://raw.githubusercontent.com/Twilight0/Twilight0/master/README.md" -o /tmp/readme.md
+          printf -- '---\nlayout: default\ntitle: About Me\n---\n' > about.md
+          cat /tmp/readme.md >> about.md
 
-      - name: Commit if changed
+      - name: Commit and push if changed
         run: |
-          if ! git diff --quiet about.md; then
-            git config user.name "AliveOS Bot"
-            git config user.email "contact@aliveos.org"
-            git add about.md
-            git commit -m "Sync about page from GitHub profile [skip ci]"
-            git push
+          git add about.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
           fi
+          git config user.name "AliveOS Bot"
+          git config user.email "contact@aliveos.org"
+          git commit -m "Sync about page from GitHub profile [skip ci]"
+          git push
