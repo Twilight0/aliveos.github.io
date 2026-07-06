@@ -36,8 +36,6 @@
             background-position: center;
             color: var(--text-color);
             margin: 0;
-            display: flex;
-            justify-content: center;
             min-height: 100vh;
             text-align: center;
             position: relative;
@@ -60,11 +58,13 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 960px;
+            width: 100%;
+            box-sizing: border-box;
             padding: 2rem;
             position: relative;
             z-index: 1;
-            margin: auto; /* centers vertically & horizontally; stays safe when content overflows (long posts) */
+            margin: 0 auto;
         }
 
         /* Logo and Header */
