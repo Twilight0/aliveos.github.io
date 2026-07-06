@@ -423,6 +423,70 @@
             color: var(--accent-blue);
         }
 
+        /* Expandable feature cards */
+        .feature-card {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .feature-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toggle-arrow {
+            font-size: 0.7rem;
+            color: var(--footer-text);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            margin-left: auto;
+            opacity: 0.6;
+        }
+
+        .feature-card.expanded .toggle-arrow {
+            transform: rotate(90deg);
+        }
+
+        .feature-extra {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+            opacity: 0;
+            margin-top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .feature-card.expanded .feature-extra {
+            max-height: 80px;
+            opacity: 1;
+            margin-top: 0.5rem;
+        }
+
+        .feature-extra a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: 'Roboto Mono', monospace;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid var(--grid-line);
+            border-radius: 6px;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .feature-extra a:hover {
+            border-color: var(--accent-blue);
+            background-color: rgba(88, 166, 255, 0.08);
+            text-decoration: none;
+        }
+
+        .feature-extra a::before {
+            content: "↗ ";
+        }
+
     </style>
 </head>
 <body>
