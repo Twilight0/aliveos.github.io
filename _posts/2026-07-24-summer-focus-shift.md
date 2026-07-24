@@ -70,22 +70,21 @@ The design of AliveOS intentionally fuses concepts from two sources that, on
 paper, should not have much to do with each other: **System76's COSMIC** and
 **Ubuntu's Unity**.
 
-From COSMIC, I take the idea of a clean, focused, no-nonsense interface that
-gets out of your way. The way it handles workspaces, the attention to
-consistent spacing and typography, the feeling that somebody actually thought
-about where every pixel goes &mdash; that is the kind of polish I want, without
-the Plasma-level complexity hangover.
+From COSMIC, I take primarily the look &mdash; its clean, focused, no-nonsense
+visual language. The attention to consistent spacing and typography, the
+feeling that somebody actually thought about where every pixel goes &mdash;
+that is the kind of polish I want, without importing the whole COSMIC shell.
 
-From Unity, I take the keyboard-and-mouse fusion that was ahead of its time and
-still, in my opinion, unmatched for workflow density. The HUD, the global menu,
-the way Unity let you drive the entire desktop from the keyboard without
-forcing you into a tiling window manager straight out of a 1990s hacker movie.
-Unity understood something that many modern desktops forgot: you do not need to
-choose between keyboard and mouse. You use both, fluidly, and the desktop
-should keep up.
+From Unity, I take the layout and window manager tricks &mdash; the
+keyboard-and-mouse fusion that was ahead of its time and still, in my opinion,
+unmatched for workflow density. The global menu, the way Unity let you drive
+the entire desktop from the keyboard without forcing you into a tiling window
+manager straight out of a 1990s hacker movie. Unity understood something that
+many modern desktops forgot: you do not need to choose between keyboard and
+mouse. You use both, fluidly, and the desktop should keep up.
 
 AliveOS is not a clone of either. It is an attempt to take the best lessons from
-both &mdash; COSMIC's visual discipline and Unity's interaction model &mdash;
+both &mdash; COSMIC's visual language and Unity's layout philosophy &mdash;
 and fuse them into something that runs on Cinnamon's solid, resource-conscious
 foundation. Borrowing good ideas is not cheating. It is standing on the
 shoulders of giants who got it mostly right.
