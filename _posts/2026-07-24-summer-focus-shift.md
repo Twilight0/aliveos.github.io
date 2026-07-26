@@ -116,6 +116,3 @@ with a more honest description of what we are actually trying to achieve.
 
 More news as things land. After me.
 
-> Zero Bloat Policy reminder: fast does not mean fat. The goal is a desktop
-> that stays out of your way, whether you are coding, designing, or just trying
-> to open a file before your afternoon coffee kicks in.

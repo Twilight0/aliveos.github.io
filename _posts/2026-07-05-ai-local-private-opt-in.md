@@ -51,7 +51,3 @@ the rest of AliveOS: lightweight, developer-friendly, and out of the way unless
 you ask for it.
 
 More details as the pieces come together.
-
-> Zero Bloat Policy reminder: the AI stack is opt-in precisely because it is not
-> essential for everyone. Nothing is pre-installed or running unless you choose
-> to enable it.

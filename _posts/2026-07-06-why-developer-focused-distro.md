@@ -57,7 +57,3 @@ the currency of Arch without the configuration hangover. And for the sort of
 user who has noticed that most distributions optimize for breadth of options,
 when what you actually wanted was a polished, opinionated default that is ready
 the moment you sit down.
-
-> Zero Bloat Policy reminder: opinionated does not mean bloated. We pick
-> defaults carefully and include only what is essential &mdash; the rest stays
-> available, never pre-installed. You get the polish, not the pile.

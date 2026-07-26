@@ -87,8 +87,6 @@ then, expect sporadic updates here as individual components reach a usable
 state, the package set stabilizes, and the installer image starts coming
 together.
 
-> Zero Bloat Policy: strictly essential utilities, no office suites, no
-> pre-installed bloatware. Clean by default.
 
 Thanks for following along &mdash; the next update will be more concrete as
 pieces start landing.

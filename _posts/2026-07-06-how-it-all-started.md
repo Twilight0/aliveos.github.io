@@ -94,6 +94,3 @@ AliveOS is not a rejection of anything. It is a curation &mdash; the specific
 pieces, tuned to work together, on a base I trust, built around a picker that
 finally does what I want it to. After me.
 
-> Zero Bloat Policy reminder: this is exactly why the policy exists. Coherence
-> beats quantity. The right pieces, working together, beat a larger pile that
-> doesn't. You get the polish, not the pile.

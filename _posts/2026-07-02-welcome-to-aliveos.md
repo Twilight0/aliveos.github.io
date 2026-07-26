@@ -36,8 +36,5 @@ to watch the repository:
 git clone https://github.com/Twilight0/aliveos.github.io.git
 ```
 
-> Zero Bloat Policy: AliveOS contains strictly essential utilities. It does not
-> include office suites or other unnecessary pre-installed bloatware. Clean by
-> default.
 
 Thanks for stopping by &mdash; more updates soon.

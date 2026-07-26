@@ -177,6 +177,3 @@ curated distribution looks like. Not a bigger pile of packages &mdash; a
 
 More updates as pieces land.
 
-> Zero Bloat Policy reminder: every component mentioned above earned its place.
-> Nothing is included because "someone might want it." It is included because
-> it works, it fits, and it is needed. If that changes, it goes.
