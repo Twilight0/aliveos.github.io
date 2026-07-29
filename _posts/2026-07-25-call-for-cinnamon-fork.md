@@ -56,7 +56,7 @@ If you are interested in contributing, please:
 
 1. **Fork the repository** (to be announced) on GitHub.
 2. Clone your fork and review the contributing guidelines (to be provided).
-3. Join the discussion in the **AliveOS Discord** or open an issue on the repository to introduce yourself and share your interests.
+3. Join the discussion in the **AliveOS Forum** or open an issue on the repository to introduce yourself and share your interests.
 4. Look for issues tagged `help-wanted` or `good-first-issue` to begin contributing.
 
 We especially welcome those with experience in Cinnamon development, GTK/GNOME libraries, X11/Xlibre programming, desktop compositing, or packaging for Linux distributions.
