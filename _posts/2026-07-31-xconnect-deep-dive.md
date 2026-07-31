@@ -146,7 +146,7 @@ The CLI isn't an afterthought — it's a first-class citizen designed for power 
 
 ## What's Next
 
-The roadmap (see [FEATURES.md](https://github.com/Twilight0/xconnect/blob/main/FEATURES.md)) includes:
+The roadmap (see [FEATURES.md](https://github.com/Twilight0/xconnect/blob/master/FEATURES.md)) includes:
 
 - **Priority 1**: SFTP remote filesystem access — mount phone storage via `sshfs`/`gio mount`
 - **Priority 2**: SMS conversation threads, MMS support, configurable app reaction fallback engine
@@ -171,4 +171,4 @@ No KDE dependencies. Just Vala, GTK3, and a clean D-Bus interface.
 
 ---
 
-*Got feedback? Found a bug? Open an issue on [GitHub](https://github.com/Twilight0/xconnect) or join the discussion on the [AliveOS Forum](https://aliveos.org/forum).*
+*Got feedback? Found a bug? Open an issue on [GitHub](https://github.com/Twilight0/xconnect/issues) or join the discussion on the [AliveOS Forum](https://aliveos.org/forum).*
