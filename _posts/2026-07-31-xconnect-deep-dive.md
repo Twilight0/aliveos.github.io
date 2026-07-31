@@ -9,11 +9,11 @@ author: The AliveOS Project
 
 Let's cut to the chase: KDE Connect is a fantastic project, but it comes with a dependency chain that makes it unsuitable for lightweight, GTK-based desktop environments. If you're running Cinnamon, MATE, or XFCE on Arch, you shouldn't need to pull in half of KDE's infrastructure just to get clipboard sync and notification mirroring working.
 
-So we built **xconnect** — a clean-room implementation of the KDE Connect protocol in Vala/C with a GTK3/XApp GUI. No KDE dependencies. Just pure functionality.
+So we built **xconnect** — a fork of [mconnect](https://github.com/bboozzoo/mconnect), Maciej Borzecki's excellent KDE Connect protocol implementation in Vala/C. We kept the solid protocol foundation and added a GTK3/XApp GUI, expanded the CLI, and implemented features that the original project never prioritized. No KDE dependencies. Just pure functionality.
 
 ## Technical Architecture
 
-xconnect consists of three components:
+Built on top of mconnect's Vala/C foundation, xconnect extends the architecture with three components:
 
 1. **xconnect daemon** — The core service handling protocol negotiation, device discovery, TLS channel management, and packet routing via D-Bus (`org.xconnect`).
 
@@ -168,6 +168,10 @@ xconnectctl list-devices
 ```
 
 No KDE dependencies. Just Vala, GTK3, and a clean D-Bus interface.
+
+---
+
+*xconnect is a fork of [mconnect](https://github.com/bboozzoo/mconnect) by Maciej Borzecki. We're grateful for the solid protocol foundation that made this project possible.*
 
 ---
 
