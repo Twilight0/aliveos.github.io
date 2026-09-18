@@ -6,6 +6,10 @@ layout: default
         <h2 class="post-title">{{ page.title }}</h2>
         <p class="post-meta">
             {{ page.date | date: "%B %d, %Y" }}{% if page.author %} &middot; {{ page.author }}{% endif %}
+            {% assign words = page.content | number_of_words %}
+            {% assign minutes = words | divided_by: 200 %}
+            {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+            &middot; <span class="post-reading-time">{{ minutes }} min read</span>
         </p>
     </header>
     <div class="post-content">
