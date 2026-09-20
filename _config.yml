@@ -4,6 +4,7 @@ description: >-
   essential performance and a clean workflow.
 url: "https://aliveos.org"
 baseurl: ""
+future: true
 
 # Clean news post URLs: /news/<post-slug>/
 permalink: /news/:title/
