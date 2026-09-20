@@ -16,7 +16,7 @@ or the particular joy of watching a desktop freeze because the memory
 controller just hung, skip to the end where I ask for help.
 
 This work was previously discussed in
-[Xlibre, Nouveau, and Telegram Bans](/news/xlibre-nouveau-and-telegram-bans/),
+[Xlibre, Nouveau, and Telegram Bans](/news/2026-09-15-xlibre-nouveau-and-telegram-bans/),
 where we outlined the importance of a Wayland-compatible, open-source driver
 for legacy hardware. This post is the technical follow-up, documenting the
 reverse engineering that made it happen.
@@ -353,7 +353,7 @@ data.
 
 ## See Also
 
-- [Xlibre, Nouveau, and Telegram Bans](/news/xlibre-nouveau-and-telegram-bans/) &mdash;
+- [Xlibre, Nouveau, and Telegram Bans](/news/2026-09-15-xlibre-nouveau-and-telegram-bans/) &mdash;
   The broader context for this work: why a Wayland-compatible, open-source
   driver matters for legacy hardware, and why making it work properly is worth
   the effort.
