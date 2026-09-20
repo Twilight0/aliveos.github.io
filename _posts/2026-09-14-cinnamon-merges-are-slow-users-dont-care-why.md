@@ -1,4 +1,5 @@
 ---
+permalink: /news/cinnamon-merges-are-slow-users-dont-care-why/
 layout: post
 title: "Cinnamon Merges Are Slow, Users Don't Care Why, and Why I'm Toying With the Idea of a Fork"
 date: 2026-09-14 10:00:00 +0000

@@ -1,4 +1,5 @@
 ---
+permalink: /news/aur-supply-chain-attack/
 layout: post
 title: "AUR Supply Chain Attack: What Happened and How AliveOS Users Are Protected"
 date: 2026-08-07 09:00:00 +0000

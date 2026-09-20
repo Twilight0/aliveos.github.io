@@ -1,4 +1,5 @@
 ---
+permalink: /news/progress-update/
 layout: post
 title: "Progress Update: Foundations Taking Shape"
 date: 2026-07-04 10:00:00 +0000 +0000

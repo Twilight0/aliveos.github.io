@@ -1,4 +1,5 @@
 ---
+permalink: /news/dory-file-manager-deep-dive/
 layout: post
 title: "Dory: Why We Forked Nemo and What It Took to Build a Proper File Chooser Portal"
 date: 2026-08-03 10:00:00 +0000

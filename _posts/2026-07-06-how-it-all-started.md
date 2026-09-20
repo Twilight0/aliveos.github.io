@@ -1,4 +1,5 @@
 ---
+permalink: /news/how-it-all-started/
 layout: post
 title: "How It All Started: One File Picker, a Rejected PR, and a Detour Through KDE"
 date: 2026-07-06 22:00:00 +0000 +0000

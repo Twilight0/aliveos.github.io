@@ -1,4 +1,5 @@
 ---
+permalink: /news/why-developer-focused-distro/
 layout: post
 title: "Why a Developer-Focused Distro, When Power Users Can Tweak Their Own?"
 date: 2026-07-06 22:00:00 +0000 +0000

@@ -1,4 +1,5 @@
 ---
+permalink: /news/on-delays-qtile-perfectionists-dilemma/
 layout: post
 title: "On Delays, Qtile, and the Perfectionist's Dilemma"
 date: 2026-09-06 10:00:00 +0000

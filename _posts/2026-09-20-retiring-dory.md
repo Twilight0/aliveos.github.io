@@ -1,11 +1,12 @@
 ---
+permalink: /news/retiring-dory/
 layout: post
 title: "Why We Are Retiring Dory: A File Manager That Became a Portal Backend"
 date: 2026-09-20 14:00:00 +0000
 author: The AliveOS Project
 ---
 
-Six weeks ago, we wrote about [Dory](/news/2026-08-03-dory-file-manager-deep-dive/) as
+Six weeks ago, we wrote about [Dory](/news/dory-file-manager-deep-dive/) as
 the cornerstone of AliveOS &mdash; a standalone file chooser portal backend
 forked from Nemo, purpose-built for sandboxed application integration. Today
 we are retiring it. Not because it failed, but because it succeeded at the
@@ -161,7 +162,7 @@ do. Now we ship the portal backend without the file manager attached to it.
 
 ## See Also
 
-- [Dory: Why We Forked Nemo and What It Took to Build a Proper File Chooser Portal](/news/2026-08-03-dory-file-manager-deep-dive/) &mdash;
+- [Dory: Why We Forked Nemo and What It Took to Build a Proper File Chooser Portal](/news/dory-file-manager-deep-dive/) &mdash;
   The original technical deep-dive into Dory's architecture and the problems
   it solved.
 - [xdg-desktop-portal-aliveos](https://github.com/Twilight0/xdg-desktop-portal-aliveos) &mdash;

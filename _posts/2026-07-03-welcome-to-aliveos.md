@@ -1,4 +1,5 @@
 ---
+permalink: /news/welcome-to-aliveos/
 layout: post
 title: "Welcome to AliveOS"
 date: 2026-07-03 16:00:00 +0000 +0000
