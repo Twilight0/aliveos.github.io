@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nouveau Fermi Reclocking: Reverse Engineering, Falcon Microcode, and a Call for Hardware Telemetry"
-date: 2026-09-19 14:00:00 +0000
+date: 2026-09-18 14:00:00 +0000
 author: The AliveOS Project
 ---
 
