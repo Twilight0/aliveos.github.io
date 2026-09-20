@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why a Developer-Focused Distro, When Power Users Can Tweak Their Own?"
-date: 2026-07-06 18:00:00 +0000
+date: 2026-07-26 18:00:00 +0000
 author: The AliveOS Project
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Progress Update: Gathering the Pieces"
-date: 2026-07-08 10:00:00 +0000
+date: 2026-07-26 10:00:00 +0000
 author: The AliveOS Project
 ---
 

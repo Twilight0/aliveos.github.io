@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI in AliveOS: Local, Private, and Opt-In"
-date: 2026-07-05 05:00:00 +0000
+date: 2026-07-26 05:00:00 +0000
 author: The AliveOS Project
 ---
 
