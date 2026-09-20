@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why We Are Retiring Dory: A File Manager That Became a Portal Backend"
-date: 2026-09-18 20:00:00 +0000
+date: 2026-09-20 14:00:00 +0000
 author: The AliveOS Project
 ---
 
