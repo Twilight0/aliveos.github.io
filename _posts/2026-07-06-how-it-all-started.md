@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How It All Started: One File Picker, a Rejected PR, and a Detour Through KDE"
-date: 2026-07-26 19:00:00 +0000
+date: 2026-07-06 22:00:00 +0000 +0000
 author: The AliveOS Project
 ---
 

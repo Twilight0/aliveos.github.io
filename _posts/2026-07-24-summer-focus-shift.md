@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Summer, Bugs, and a Slight Change of Direction"
-date: 2026-07-26 08:00:00 +0000
+date: 2026-07-24 12:00:00 +0000 +0000
 author: The AliveOS Project
 ---
 
