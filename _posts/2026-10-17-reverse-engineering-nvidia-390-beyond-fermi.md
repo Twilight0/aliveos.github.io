@@ -4,7 +4,10 @@ layout: post
 title: "Decompiling NVIDIA 390.157: From Fermi DDR3 Reclocking to Vulkan, GPU-Compressed ZRAM, Hybrid VA-API Encoding, and the Pre-Nova Nouveau Roadmap"
 date: 2026-10-17 16:30:00 +0300
 author: The AliveOS Project
+image: /assets/nouveau-reclocking-banner.jpg
 ---
+
+![NVC0 GPU Silicon & Memory Reclocking Artwork](/assets/nouveau-reclocking-banner.jpg)
 
 A month ago, I published my [first technical deep dive](/news/nouveau-fermi-reclock-deep-dive/) into `nouveau-fermi-reclock-dkms`, explaining how I brought core, shader, and voltage scaling to NVIDIA Fermi GPUs (`NVC0`/`NVC1`/`NVC3`/`NVC4`/`NVC8`/`NVCE`/`NVCF`) on Linux 6.18. At the end of that article, DDR3 memory reclocking was still the white whale: every attempt to route `MEMX` bytecode through `gt215_pmu_send()` triggered `PRIVRING` bus faults (`0x10a4a0` / `0x10a4cc`), and the 3 GB of DDR3 VRAM on my Dell XPS 17 (`L702X`, GeForce GT 555M `GF106M`) remained pinned at its boot clock of `324 MHz`.
 
