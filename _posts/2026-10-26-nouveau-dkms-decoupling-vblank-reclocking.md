@@ -149,8 +149,8 @@ Currently, `nouveau-dynclockd` tracks GPU load through a combination of `/proc/i
 
 Transitioning the governor to read these hardware counters will drop polling overhead to less than `0.05 ms`, providing instantaneous, cycle-accurate load detection.
 
-### The Universal Roadmap: `nouveau-reclocking-dkms`
-Our long-term objective remains the transformation of this work into a unified reclocking driver for all pre-`Nova` NVIDIA hardware:
+### The Universal Pre-Nova Roadmap: Expanding `nouveau-dkms`
+Our long-term objective for **`nouveau-dkms`** is to serve as the unified out-of-tree driver bringing full hardware reclocking, thermal safety, and power governance to all pre-`Nova` NVIDIA hardware:
 
 ```
 Tesla (GT215 / G92) ──► Fermi (GF100–GF119) ──► Kepler (GK104/GK107) ──► Maxwell 1 (GM107)
