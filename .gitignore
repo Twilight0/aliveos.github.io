@@ -20,3 +20,7 @@ Gemfile.lock
 # Internal / Confidential notes
 VALUABLE_INFO.md
 
+# Cloudflare Wrangler cache
+.wrangler/
+
+

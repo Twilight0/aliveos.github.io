@@ -19,47 +19,48 @@ description: News, adjacent open-source projects, community spotlights, and tech
     </div>
 
     <div class="ecosystem-grid">
-        <!-- Markdown Posts with category: news/guide/project -->
-        {% assign custom_posts = site.posts | where_exp: "item", "item.category == 'news' or item.category == 'guide' or item.category == 'project'" %}
-        {% for post in custom_posts %}
-            {% assign post_cat = post.type | default: post.category | default: "news" %}
-            <div class="ecosystem-card" data-category="{{ post_cat }}">
-                <div class="ecosystem-card-body">
-                    <div class="ecosystem-card-top">
-                        <span class="category-badge badge-{{ post_cat }}">
-                            {% if post_cat == 'project' %}Adjacent Project{% elsif post_cat == 'guide' %}Guide{% elsif post_cat == 'tool' %}Tool{% else %}Ecosystem News{% endif %}
-                        </span>
-                        <span class="card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <!-- Markdown Posts categorized as news / guide / project -->
+        {% for post in site.posts %}
+            {% if post.category == 'news' or post.categories contains 'news' or post.type == 'guide' or post.type == 'project' %}
+                {% assign post_cat = post.type | default: 'news' %}
+                <div class="ecosystem-card" data-category="{{ post_cat }}">
+                    <div class="ecosystem-card-body">
+                        <div class="ecosystem-card-top">
+                            <span class="category-badge badge-{{ post_cat }}">
+                                {% if post_cat == 'project' %}Adjacent Project{% elsif post_cat == 'guide' %}Guide{% elsif post_cat == 'tool' %}Tool{% else %}Ecosystem News{% endif %}
+                            </span>
+                            <span class="card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+                        </div>
+
+                        <h3 class="ecosystem-card-title">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+
+                        <p class="ecosystem-card-desc">
+                            {{ post.description | default: post.excerpt | strip_html | truncatewords: 35 }}
+                        </p>
+
+                        {% if post.tags %}
+                            <div class="ecosystem-tags">
+                                {% for tag in post.tags %}
+                                    <span class="tag-pill">#{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
 
-                    <h3 class="ecosystem-card-title">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h3>
-
-                    <p class="ecosystem-card-desc">
-                        {{ post.description | default: post.excerpt | strip_html | truncatewords: 35 }}
-                    </p>
-
-                    {% if post.tags %}
-                        <div class="ecosystem-tags">
-                            {% for tag in post.tags %}
-                                <span class="tag-pill">#{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-
-                <div class="ecosystem-card-actions">
-                    <a class="action-link" href="{{ post.url }}">
-                        {% if post_cat == 'guide' %}Read Guide &rarr;{% else %}Read Article &rarr;{% endif %}
-                    </a>
-                    {% if post.project_url %}
-                        <a class="action-link-ext" href="{{ post.project_url }}" target="_blank" rel="noopener noreferrer">
-                            Visit Project &nearr;
+                    <div class="ecosystem-card-actions">
+                        <a class="action-link" href="{{ post.url }}">
+                            {% if post_cat == 'guide' %}Read Guide &rarr;{% else %}Read Article &rarr;{% endif %}
                         </a>
-                    {% endif %}
+                        {% if post.project_url %}
+                            <a class="action-link-ext" href="{{ post.project_url }}" target="_blank" rel="noopener noreferrer">
+                                Visit Project &nearr;
+                            </a>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
 
         <!-- Curated Data Items from _data/ecosystem.yml -->
@@ -74,9 +75,9 @@ description: News, adjacent open-source projects, community spotlights, and tech
                     </div>
 
                     <h3 class="ecosystem-card-title">
-                        {% if item.article_url != "" %}
+                        {% if item.article_url and item.article_url != "" %}
                             <a href="{{ item.article_url }}">{{ item.title }}</a>
-                        {% elsif item.project_url != "" %}
+                        {% elsif item.project_url and item.project_url != "" %}
                             <a href="{{ item.project_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
                         {% else %}
                             {{ item.title }}
@@ -97,12 +98,12 @@ description: News, adjacent open-source projects, community spotlights, and tech
                 </div>
 
                 <div class="ecosystem-card-actions">
-                    {% if item.article_url != "" %}
+                    {% if item.article_url and item.article_url != "" %}
                         <a class="action-link" href="{{ item.article_url }}">
                             {% if item.category == 'guide' %}Read Guide &rarr;{% else %}Read Article &rarr;{% endif %}
                         </a>
                     {% endif %}
-                    {% if item.project_url != "" %}
+                    {% if item.project_url and item.project_url != "" %}
                         <a class="action-link-ext" href="{{ item.project_url }}" target="_blank" rel="noopener noreferrer">
                             {% if item.category == 'project' %}Visit Project &nearr;{% else %}Source &nearr;{% endif %}
                         </a>
