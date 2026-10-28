@@ -26,6 +26,7 @@ exclude:
   - Gemfile.lock
   - "*.gemspec"
   - vendor
+  - VALUABLE_INFO.md
 
 defaults:
   - scope:

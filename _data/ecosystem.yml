@@ -1,0 +1,68 @@
+# Curated adjacent projects, ecosystem news, and technical guides.
+# Add new items here or write full markdown posts in _posts with `category: news`.
+
+- title: "XLibre Display Server"
+  category: "project"
+  category_label: "Adjacent Project"
+  date: "2026-10-15"
+  author: "XLibre Team"
+  description: "A community-driven, tear-free fork of the X11 display server engineered for stability, legacy driver compatibility, atomic modesetting, and lightweight developer workflows."
+  tags:
+    - "X11"
+    - "Display Server"
+    - "Graphics"
+  project_url: "https://github.com/X11Libre/xserver"
+  article_url: "/news/xlibre-nouveau-and-telegram-bans/"
+
+- title: "CachyOS Performance Kernel & Repositories"
+  category: "project"
+  category_label: "Adjacent Project"
+  date: "2026-10-01"
+  author: "CachyOS Community"
+  description: "High-performance Linux kernels compiled with modern CPU instruction sets (x86-64-v2/v3/v4) and advanced BORE schedulers—the core upstream kernel foundation adopted by AliveOS."
+  tags:
+    - "Kernel"
+    - "BORE"
+    - "Optimization"
+  project_url: "https://cachyos.org"
+  article_url: ""
+
+- title: "Zero-Stutter VBlank Reclocking on Legacy NVIDIA"
+  category: "guide"
+  category_label: "Guide"
+  date: "2026-10-26"
+  author: "Twilight0"
+  description: "In-depth technical guide on decoupling memory reclocking and synchronizing frequency ramps with display vertical blank intervals under nouveau-dkms."
+  tags:
+    - "NVIDIA"
+    - "Nouveau"
+    - "DKMS"
+    - "VBlank"
+  project_url: ""
+  article_url: "/news/nouveau-dkms-decoupling-vblank-reclocking/"
+
+- title: "Native Legacy CPU Execution with Muse Code"
+  category: "guide"
+  category_label: "Guide"
+  date: "2026-10-18"
+  author: "Twilight0"
+  description: "A developer walkthrough on packaging and running modern editor runtimes on non-AVX legacy x86-64 processors with opt-in emulation."
+  tags:
+    - "CPU"
+    - "Legacy"
+    - "Tooling"
+  project_url: ""
+  article_url: "/news/muse-code-native-legacy-cpus/"
+
+- title: "Arch Linux AUR Supply Chain Hardening"
+  category: "news"
+  category_label: "Ecosystem News"
+  date: "2026-08-07"
+  author: "Arch Linux Community"
+  description: "Analysis of supply chain security incidents across package repositories, review of malicious injection patterns, and defensive auditing practices."
+  tags:
+    - "Arch Linux"
+    - "AUR"
+    - "Security"
+  project_url: "https://archlinux.org"
+  article_url: "/news/aur-supply-chain-attack/"

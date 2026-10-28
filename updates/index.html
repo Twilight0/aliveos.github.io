@@ -1,0 +1,26 @@
+---
+layout: default
+title: Updates
+description: Latest development updates, progress reports, and release logs from the AliveOS project.
+---
+
+<section class="news-section">
+    <h2 class="section-heading">Project Updates &amp; Progress</h2>
+
+    {% assign updates = site.posts | where_exp: "item", "item.category != 'news'" %}
+    {% if updates.size == 0 %}
+        <p class="news-empty">No updates yet. Check back soon.</p>
+    {% else %}
+        <div class="news-grid">
+            {% for post in updates %}
+                <div class="news-card">
+                    <a class="news-card-title" href="{{ post.url }}">{{ post.title }}</a>
+                    <span class="news-card-date">{{ post.date | date: "%b %d, %Y" }}{% if post.author %} &middot; {{ post.author }}{% endif %}</span>
+                    {% if post.excerpt %}
+                        <p class="news-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
