@@ -4,6 +4,12 @@ layout: post
 title: "What You Solve Beats How You Build: Notes on Software in the Age of AI"
 date: 2026-10-14 10:00:00 +0000
 author: The AliveOS Project
+category: ai
+type: ai
+tags:
+  - Artificial Intelligence
+  - Software Engineering
+  - Philosophy
 ---
 
 
