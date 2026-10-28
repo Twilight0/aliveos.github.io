@@ -25,7 +25,7 @@ layout: default
     </div>
 
     <p class="post-back">
-        {% if page.category == 'news' or page.categories contains 'news' or page.type == 'news' or page.type == 'guide' %}
+        {% if page.category == 'news' or page.categories contains 'news' or page.category == 'ai' or page.categories contains 'ai' or page.type == 'news' or page.type == 'guide' or page.type == 'ai' %}
             <a href="/news/">&larr; Back to News</a>
         {% else %}
             <a href="/updates/">&larr; Back to Updates</a>

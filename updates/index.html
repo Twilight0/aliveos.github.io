@@ -9,7 +9,7 @@ description: Latest development updates, progress reports, and release logs from
 
     <div class="news-grid">
         {% for post in site.posts %}
-            {% if post.category == 'news' or post.categories contains 'news' %}
+            {% if post.category == 'news' or post.categories contains 'news' or post.category == 'ai' or post.categories contains 'ai' or post.type == 'ai' or post.type == 'guide' or post.type == 'project' %}
                 {% continue %}
             {% endif %}
             <div class="news-card">

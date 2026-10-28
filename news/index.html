@@ -15,19 +15,20 @@ description: News, adjacent open-source projects, community spotlights, and tech
         <button type="button" class="filter-btn active" onclick="filterCategory('all', this)">All</button>
         <button type="button" class="filter-btn" onclick="filterCategory('project', this)">Adjacent Projects</button>
         <button type="button" class="filter-btn" onclick="filterCategory('guide', this)">Guides &amp; Tutorials</button>
+        <button type="button" class="filter-btn" onclick="filterCategory('ai', this)">Artificial Intelligence</button>
         <button type="button" class="filter-btn" onclick="filterCategory('news', this)">Ecosystem News</button>
     </div>
 
     <div class="ecosystem-grid">
-        <!-- Markdown Posts categorized as news / guide / project -->
+        <!-- Markdown Posts categorized as news / guide / project / ai -->
         {% for post in site.posts %}
-            {% if post.category == 'news' or post.categories contains 'news' or post.type == 'guide' or post.type == 'project' %}
-                {% assign post_cat = post.type | default: 'news' %}
+            {% if post.category == 'news' or post.categories contains 'news' or post.category == 'ai' or post.categories contains 'ai' or post.type == 'guide' or post.type == 'project' or post.type == 'ai' %}
+                {% assign post_cat = post.type | default: post.category | default: 'news' %}
                 <div class="ecosystem-card" data-category="{{ post_cat }}">
                     <div class="ecosystem-card-body">
                         <div class="ecosystem-card-top">
                             <span class="category-badge badge-{{ post_cat }}">
-                                {% if post_cat == 'project' %}Adjacent Project{% elsif post_cat == 'guide' %}Guide{% elsif post_cat == 'tool' %}Tool{% else %}Ecosystem News{% endif %}
+                                {% if post_cat == 'project' %}Adjacent Project{% elsif post_cat == 'guide' %}Guide{% elsif post_cat == 'ai' %}Artificial Intelligence{% elsif post_cat == 'tool' %}Tool{% else %}Ecosystem News{% endif %}
                             </span>
                             <span class="card-date">{{ post.date | date: "%b %d, %Y" }}</span>
                         </div>
@@ -55,7 +56,7 @@ description: News, adjacent open-source projects, community spotlights, and tech
                         </a>
                         {% if post.project_url %}
                             <a class="action-link-ext" href="{{ post.project_url }}" target="_blank" rel="noopener noreferrer">
-                                Visit Project &nearr;
+                                {% if post_cat == 'project' %}Visit Project &nearr;{% elsif post_cat == 'ai' %}Source / Credit &nearr;{% else %}Source &nearr;{% endif %}
                             </a>
                         {% endif %}
                     </div>
@@ -105,7 +106,7 @@ description: News, adjacent open-source projects, community spotlights, and tech
                     {% endif %}
                     {% if item.project_url and item.project_url != "" %}
                         <a class="action-link-ext" href="{{ item.project_url }}" target="_blank" rel="noopener noreferrer">
-                            {% if item.category == 'project' %}Visit Project &nearr;{% else %}Source &nearr;{% endif %}
+                            {% if item.category == 'project' %}Visit Project &nearr;{% elsif item.category == 'ai' %}Source / Credit &nearr;{% else %}Source &nearr;{% endif %}
                         </a>
                     {% endif %}
                 </div>
