@@ -1,20 +1,6 @@
 # Curated adjacent projects, ecosystem news, and technical guides.
 # Add new items here or write full markdown posts in _posts with `category: news` or `category: ai`.
 
-- title: "Ollama: Local AI Model Runner"
-  category: "ai"
-  category_label: "Artificial Intelligence"
-  date: "2026-10-28"
-  author: "Ollama Community"
-  description: "A lightweight, CLI-driven open-source runner for hosting Llama, Mistral, and Phi-4 models locally on Linux with native hardware acceleration and zero telemetry."
-  tags:
-    - "AI"
-    - "Local LLM"
-    - "Privacy"
-    - "Open Source"
-  project_url: "https://ollama.com"
-  article_url: "/news/technology-and-ai-2026-open-source-local-models/"
-
 - title: "XLibre Display Server"
   category: "project"
   category_label: "Adjacent Project"
