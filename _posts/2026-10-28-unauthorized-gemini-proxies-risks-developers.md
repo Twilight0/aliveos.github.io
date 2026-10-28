@@ -4,8 +4,8 @@ layout: post
 title: "The Illusion of 'Free' APIs: Why Developers Must Avoid Unauthorized Gemini Web Proxies"
 date: 2026-10-28 21:05:00 +0200
 author: The AliveOS Project
-category: news
-type: news
+category: ai
+type: ai
 image: /assets/gemini-proxy-illusion-banner.jpg
 tags:
   - Artificial Intelligence
