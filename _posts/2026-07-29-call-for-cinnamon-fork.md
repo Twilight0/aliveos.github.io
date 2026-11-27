@@ -1,5 +1,6 @@
 ---
-permalink: /news/call-for-cinnamon-fork/
+permalink: /updates/call-for-cinnamon-fork/
+redirect_from: [/news/call-for-cinnamon-fork/]
 layout: post
 title: "Call for Help: Building a Cinnamon Fork to Preserve X11/Xlibre Compatibility"
 date: 2026-07-29 09:00:00 +0000

@@ -1,5 +1,6 @@
 ---
-permalink: /news/aliveos-on-android-termux-proot/
+permalink: /updates/aliveos-on-android-termux-proot/
+redirect_from: [/news/aliveos-on-android-termux-proot/]
 layout: post
 title: "AliveOS on Android: Termux, PRoot, and a Phone That Thinks It's a Workstation"
 date: 2026-09-23 18:00:00 +0000

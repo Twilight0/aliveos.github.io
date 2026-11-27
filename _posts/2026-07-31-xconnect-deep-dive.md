@@ -1,5 +1,6 @@
 ---
-permalink: /news/xconnect-deep-dive/
+permalink: /updates/xconnect-deep-dive/
+redirect_from: [/news/xconnect-deep-dive/]
 layout: post
 title: "xconnect: A Deep Dive into Building a KDE Connect Alternative from Scratch"
 date: 2026-07-31 14:00:00 +0000

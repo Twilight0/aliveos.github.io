@@ -1,5 +1,6 @@
 ---
-permalink: /news/xlibre-nouveau-and-telegram-bans/
+permalink: /updates/xlibre-nouveau-and-telegram-bans/
+redirect_from: [/news/xlibre-nouveau-and-telegram-bans/]
 layout: post
 title: "Xlibre, Nouveau, and the Art of Getting Banned from Telegram"
 date: 2026-09-15 12:00:00 +0000

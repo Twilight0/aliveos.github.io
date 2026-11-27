@@ -1,5 +1,6 @@
 ---
-permalink: /news/reverse-engineering-nvidia-390-beyond-fermi/
+permalink: /updates/reverse-engineering-nvidia-390-beyond-fermi/
+redirect_from: [/news/reverse-engineering-nvidia-390-beyond-fermi/]
 layout: post
 title: "Decompiling NVIDIA 390.157: From Fermi DDR3 Reclocking to Vulkan, GPU-Compressed ZRAM, Hybrid VA-API Encoding, and the Pre-Nova Nouveau Roadmap"
 date: 2026-10-17 16:30:00 +0300

@@ -1,5 +1,6 @@
 ---
-permalink: /news/summer-focus-shift/
+permalink: /updates/summer-focus-shift/
+redirect_from: [/news/summer-focus-shift/]
 layout: post
 title: "Summer, Bugs, and a Slight Change of Direction"
 date: 2026-07-24 12:00:00 +0000 +0000

@@ -1,5 +1,6 @@
 ---
-permalink: /news/comments-now-available/
+permalink: /updates/comments-now-available/
+redirect_from: [/news/comments-now-available/]
 layout: post
 title: "You Can Now Comment on Posts"
 date: 2026-07-25 08:00:00 +0000

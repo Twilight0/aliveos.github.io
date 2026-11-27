@@ -1,5 +1,6 @@
 ---
-permalink: /news/progress-gathering-the-pieces/
+permalink: /updates/progress-gathering-the-pieces/
+redirect_from: [/news/progress-gathering-the-pieces/]
 layout: post
 title: "Progress Update: Gathering the Pieces"
 date: 2026-07-08 16:00:00 +0000 +0000

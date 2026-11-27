@@ -22,7 +22,7 @@ description: News, adjacent open-source projects, community spotlights, and tech
     <div class="ecosystem-grid">
         <!-- Markdown Posts categorized as news / guide / project / ai -->
         {% for post in site.posts %}
-            {% if post.category == 'news' or post.categories contains 'news' or post.category == 'ai' or post.categories contains 'ai' or post.type == 'guide' or post.type == 'project' or post.type == 'ai' %}
+            {% if post.url contains '/news/' %}
                 {% assign post_cat = post.type | default: post.category | default: 'news' %}
                 <div class="ecosystem-card" data-category="{{ post_cat }}">
                     <div class="ecosystem-card-body">

@@ -1,5 +1,6 @@
 ---
-permalink: /news/muse-code-native-legacy-cpus/
+permalink: /updates/muse-code-native-legacy-cpus/
+redirect_from: [/news/muse-code-native-legacy-cpus/]
 layout: post
 title: "Muse Code Goes Native on Legacy CPUs: 1.4.10, Opt-in QEMU, and Our Endorsed AI Agent"
 date: 2026-10-18 12:00:00 +0000

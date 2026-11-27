@@ -6,18 +6,20 @@ url: "https://aliveos.org"
 baseurl: ""
 future: true
 
-# Clean news post URLs: /news/<post-slug>/
-permalink: /news/:title/
+# Section-fixed post URLs: /updates/<post-slug>/ by default,
+# /news/<post-slug>/ is set explicitly per-post on news items.
+permalink: /updates/:title/
 
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 
-# Whitelisted on GitHub Pages: RSS feed + sitemap
+# Whitelisted on GitHub Pages: RSS feed + sitemap + redirect stubs
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Don't publish repo meta files to the live site
 exclude:

@@ -1,5 +1,6 @@
 ---
-permalink: /news/why-vivaldi-default-browser/
+permalink: /updates/why-vivaldi-default-browser/
+redirect_from: [/news/why-vivaldi-default-browser/]
 layout: post
 title: "Why Vivaldi Is the Default Browser in AliveOS"
 date: 2026-07-06 05:00:00 +0000

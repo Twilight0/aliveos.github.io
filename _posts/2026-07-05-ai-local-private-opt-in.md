@@ -1,5 +1,6 @@
 ---
-permalink: /news/ai-local-private-opt-in/
+permalink: /updates/ai-local-private-opt-in/
+redirect_from: [/news/ai-local-private-opt-in/]
 layout: post
 title: "AI in AliveOS: Local, Private, and Opt-In"
 date: 2026-07-05 08:00:00 +0000 +0000

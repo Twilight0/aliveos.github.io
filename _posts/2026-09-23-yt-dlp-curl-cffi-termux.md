@@ -1,5 +1,6 @@
 ---
-permalink: /news/yt-dlp-curl-cffi-termux/
+permalink: /updates/yt-dlp-curl-cffi-termux/
+redirect_from: [/news/yt-dlp-curl-cffi-termux/]
 layout: post
 title: "yt-dlp-git and curl-cffi on Termux: Why Stable Is Stale and Fingerprints Matter"
 date: 2026-09-23 20:00:00 +0000

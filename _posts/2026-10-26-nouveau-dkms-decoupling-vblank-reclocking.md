@@ -1,5 +1,6 @@
 ---
-permalink: /news/nouveau-dkms-decoupling-vblank-reclocking/
+permalink: /updates/nouveau-dkms-decoupling-vblank-reclocking/
+redirect_from: [/news/nouveau-dkms-decoupling-vblank-reclocking/]
 layout: post
 title: "Decoupling Nouveau: Zero-Stutter VBlank Memory Reclocking, Repository Separation, and the Hardware Telemetry Frontier"
 date: 2026-10-26 10:00:00 +0200

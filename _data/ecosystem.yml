@@ -12,7 +12,7 @@
     - "Display Server"
     - "Graphics"
   project_url: "https://github.com/X11Libre/xserver"
-  article_url: "/news/xlibre-nouveau-and-telegram-bans/"
+  article_url: "/updates/xlibre-nouveau-and-telegram-bans/"
 
 - title: "CachyOS Performance Kernel & Repositories"
   category: "project"
@@ -39,7 +39,7 @@
     - "DKMS"
     - "VBlank"
   project_url: ""
-  article_url: "/news/nouveau-dkms-decoupling-vblank-reclocking/"
+  article_url: "/updates/nouveau-dkms-decoupling-vblank-reclocking/"
 
 - title: "Native Legacy CPU Execution with Muse Code"
   category: "guide"
@@ -52,7 +52,7 @@
     - "Legacy"
     - "Tooling"
   project_url: ""
-  article_url: "/news/muse-code-native-legacy-cpus/"
+  article_url: "/updates/muse-code-native-legacy-cpus/"
 
 - title: "Arch Linux AUR Supply Chain Hardening"
   category: "news"
@@ -65,4 +65,4 @@
     - "AUR"
     - "Security"
   project_url: "https://archlinux.org"
-  article_url: "/news/aur-supply-chain-attack/"
+  article_url: "/updates/aur-supply-chain-attack/"

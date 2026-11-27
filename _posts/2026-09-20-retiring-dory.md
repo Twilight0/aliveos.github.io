@@ -1,5 +1,6 @@
 ---
-permalink: /news/retiring-dory/
+permalink: /updates/retiring-dory/
+redirect_from: [/news/retiring-dory/]
 layout: post
 title: "Why We Are Retiring Dory: A File Manager That Became a Portal Backend"
 date: 2026-09-20 14:00:00 +0000
