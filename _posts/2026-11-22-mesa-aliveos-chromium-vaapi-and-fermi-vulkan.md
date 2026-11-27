@@ -4,8 +4,6 @@ layout: post
 title: "Mesa-AliveOS, Zero-Copy Chromium VA-API Playback, and the Road to Vulkan on NVIDIA Fermi"
 date: 2026-11-22 19:30:00 +0200
 author: The AliveOS Project
-category: news
-type: news
 tags:
   - Mesa
   - Nouveau
